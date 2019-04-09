@@ -1,0 +1,28 @@
+
+{
+
+  "author": "Marcus Silva <mvfsillva@gmail.com>",
+  "version": "0.0.0",
+  "description": "small lib using wiston to log small projects",
+  "keywords": [
+    "log",
+    "logger",
+    "wiston",
+    "small log"
+  ],
+  "scripts": {
+    "test": "xo --quiet"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "extends": [
+      "prettier"
+    ]
+  }
+}
