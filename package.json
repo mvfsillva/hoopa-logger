@@ -1,17 +1,24 @@
 {
+  "name": "hoopa-logger",
   "author": "Marcus Silva <mvfsillva@gmail.com>",
   "version": "0.0.0",
-  "description": "small lib using wiston to log small projects",
+  "description": "a library to make easier the logger in applications with winston",
   "keywords": [
     "log",
     "logger",
     "wiston",
     "wrapper",
     "wrapper lib",
-    "library"
+    "library",
+    "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvfsillva/hoopa-logger.git"
+  },
   "scripts": {
-    "lint": "xo --quiet"
+    "lint": "xo --quiet",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "winston": "^3.2.1"
