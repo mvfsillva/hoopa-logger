@@ -1,7 +1,5 @@
 # Hoopa
 
-# mvfsillva.dev
-
 <p align="center">
   <img width="400" height="auto" src=".github/hoopa.png"/>
 </p>
