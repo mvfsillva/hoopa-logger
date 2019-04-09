@@ -16,6 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/mvfsillva/hoopa-logger.git"
   },
+  "bugs": {
+    "url": "https://github.com/mvfsillva/hoopa-logger/issues"
+  },
+  "homepage": "https://github.com/mvfsillva/hoopa-logger#readme",
   "scripts": {
     "lint": "xo --quiet",
     "precommit": "lint-staged"
