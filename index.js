@@ -25,11 +25,15 @@ const messageTemplate = options => {
 const hoopa = winston.createLogger({
   format: winston.format.combine(
     winston.format.colorize(),
-    winston.format.printf(options => {
-      return messageTemplate(options)
-    })
+    winston.format.printf(options => messageTemplate(options))
   ),
-  transports: [new winston.transports.Console()],
+  transports: [new winston.transports.Console({
+    level: 'error',
+    level: 'warn',
+    level: 'info',
+    level: 'verbose',
+    level: 'debug',
+  })],
 })
 
 module.exports = hoopa
