@@ -14,13 +14,13 @@ $ npm install hoopa-logger
 ## Usage
 
 ```javascript
-import hoopa from 'hoopa-logger'
+import logger from 'hoopa-logger'
 
-hoopa.info('This is information!')
-hoopa.warn('This is a warning!')
-hoopa.error('This is a problem!')
-hoopa.verbose('This is verbose!')
-hoopa.debug('This is a debug!')
+logger.info('This is information!')
+logger.warn('This is a warning!')
+logger.error('This is a problem!')
+logger.verbose('This is verbose!')
+logger.debug('This is a debug!')
 ```
 
 ![example](.github/hoopa-logger-example.png)
