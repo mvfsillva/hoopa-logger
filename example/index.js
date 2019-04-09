@@ -1,7 +1,7 @@
-const hoopa = require ('../.')
+const logger = require ('../.')
 
-hoopa.info('This is information!')
-hoopa.warn('This is a warning!')
-hoopa.error('This is a problem!')
-hoopa.debug('This is a debug!')
-hoopa.verbose('This is a verbose!')
+logger.info('This is information!')
+logger.warn('This is a warning!')
+logger.error('This is a problem!')
+logger.debug('This is a debug!')
+logger.verbose('This is a verbose!')

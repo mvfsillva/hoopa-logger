@@ -22,7 +22,7 @@ const messageTemplate = options => {
   return `[${level} ${today}]: ${message}`
 }
 
-const hoopa = winston.createLogger({
+const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.colorize(),
     winston.format.printf(options => messageTemplate(options))
@@ -36,4 +36,4 @@ const hoopa = winston.createLogger({
   })],
 })
 
-module.exports = hoopa
+module.exports = logger
