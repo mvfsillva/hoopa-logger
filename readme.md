@@ -4,17 +4,40 @@
   <img width="400" height="auto" src=".github/hoopa.png"/>
 </p>
 
-## Contributing
+## Installation
 
-### 01. Install dependencies
-
-```sh
-$ yarn
+```shell
+$ yarn add hoopa-logger
+$ npm install hoopa-logger
 ```
 
-### 02. Learn more in the Contributing guide
+## Usage
+
+```javascript
+import hoopa from 'hoopa-logger'
+
+hoopa.info('This is information!')
+hoopa.warn('This is a warning!')
+hoopa.error('This is a problem!')
+hoopa.verbose('This is verbose!')
+hoopa.debug('This is a debug!')
+```
+
+![example](.github/hoopa-logger-example.png)
+
+## Contributing
+
+### 01. Learn more in the Contributing guide
 
 Please take a look at the [contributing guide](.github/contributing.md).
+
+### 02. Fork this project
+
+### 03. Install dependencies
+
+```sh
+$ yarn or npm install
+```
 
 ## Respect earns Respect 👏
 
