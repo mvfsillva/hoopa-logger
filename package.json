@@ -1,7 +1,7 @@
 {
   "name": "hoopa-logger",
   "author": "Marcus Silva <mvfsillva@gmail.com>",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a library to make easier the logger in applications with winston",
   "keywords": [
     "log",
