@@ -2,24 +2,28 @@ const winston = require('winston')
 
 const { config } = winston
 
-const formatNumber = num => ('0' + num).slice(-2)
+const formatNumber = num => num.toString().padStart(2, '0')
 
-const date = new Date()
-const dd = formatNumber(date.getDate())
-const mm = formatNumber(date.getMonth() + 1)
-const yyyy = formatNumber(date.getFullYear())
+const datetime = () => {
+  const d = new Date()
+  const day = formatNumber(d.getDate())
+  const month = formatNumber(d.getMonth() + 1)
+  const year = formatNumber(d.getFullYear())
+  const hour = formatNumber(d.getHours())
+  const minute = formatNumber(d.getMinutes())
+  const second = formatNumber(d.getSeconds())
 
-const h = formatNumber(date.getHours())
-const m = formatNumber(date.getMinutes())
-const s = formatNumber(date.getSeconds())
+  const date = [year, month, day].join('-')
+  const time = [hour, minute, second].join(':')
 
-const today = `${dd}/${mm}/${yyyy} ${h}:${m}:${s}`
+  return `${date} ${time}`
+}
 
 const messageTemplate = options => {
   const level = config.addColors(options.level)
   const { message = '' } = options
 
-  return `[${level} ${today}]: ${message}`
+  return `[${level} ${datetime()}]: ${message}`
 }
 
 const logger = winston.createLogger({
