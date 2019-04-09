@@ -1,6 +1,4 @@
-
 {
-
   "author": "Marcus Silva <mvfsillva@gmail.com>",
   "version": "0.0.0",
   "description": "small lib using wiston to log small projects",
@@ -8,21 +6,36 @@
     "log",
     "logger",
     "wiston",
-    "small log"
+    "wrapper",
+    "wrapper lib",
+    "library"
   ],
   "scripts": {
-    "test": "xo --quiet"
+    "lint": "xo --quiet"
   },
   "dependencies": {
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^4.1.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
     "xo": "^0.24.0"
   },
   "xo": {
     "extends": [
       "prettier"
+    ],
+    "rules": {
+      "prefer-promise-reject-errors": 0,
+      "no-use-extend-native/no-use-extend-native": 0
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint",
+      "prettier --semi false --single-quote --trailing-comma --write",
+      "git add"
     ]
   }
 }
