@@ -25,6 +25,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "node-emoji": "^1.10.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
