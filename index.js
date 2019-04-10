@@ -1,4 +1,5 @@
 const winston = require('winston')
+const Emoji = require('node-emoji')
 
 const { config } = winston
 
@@ -20,24 +21,24 @@ const datetime = () => {
 }
 
 const messageTemplate = options => {
-  const level = config.addColors(options.level)
-  const { message = '' } = options
+  const level = `${config.addColors(options.level)}`
+  const { message = '', emoji } = options
+  const emojiIcon = emoji ? Emoji.get(emoji) : ''
 
-  return `[${level} ${datetime()}]: ${message}`
+  return `${emojiIcon} [${level} ${datetime()}]: ${message}`
 }
 
 const logger = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.printf(options => messageTemplate(options))
-  ),
-  transports: [new winston.transports.Console({
-    level: 'error',
-    level: 'warn',
-    level: 'info',
-    level: 'verbose',
-    level: 'debug',
-  })],
+  format: winston.format.combine(winston.format.colorize(), winston.format.printf(options => messageTemplate(options))),
+  transports: [
+    new winston.transports.Console({
+      level: 'error',
+      level: 'warn',
+      level: 'info',
+      level: 'verbose',
+      level: 'debug',
+    }),
+  ],
 })
 
 module.exports = logger

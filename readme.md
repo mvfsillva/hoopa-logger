@@ -23,7 +23,17 @@ logger.verbose('This is verbose!')
 logger.debug('This is a debug!')
 ```
 
-![example](.github/hoopa-logger-example.png)
+### Adding Icons
+
+Hoppa logger supports [node-emoji](https://www.webfx.com/tools/emoji-cheat-sheet/) cheat sheet :rocket:
+
+To add just pass a config object with the emoji name, example:
+
+```javascript
+logger.info('This is information!', { emoji: 'information_source' })
+```
+
+![example](.github/hoopa-logger-example-emoji.png)
 
 ## Contributing
 
