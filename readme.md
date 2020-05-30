@@ -61,4 +61,4 @@ Please respect our [Code of Conduct](.github/code-of-conduct.md), in short:
 
 ## License
 
-[MIT](license) © 2019 Marcus Silva
+[MIT](license) © 2020 Marcus Silva
