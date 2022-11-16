@@ -29,7 +29,7 @@
     "winston": "3.8.2"
   },
   "devDependencies": {
-    "husky": "6.0.0",
+    "husky": "8.0.2",
     "lint-staged": "11.2.6",
     "prettier": "2.7.1",
     "xo": "0.53.0"
